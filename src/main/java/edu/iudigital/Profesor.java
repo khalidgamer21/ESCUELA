@@ -10,7 +10,7 @@ public class Profesor extends Persona {
                 this.experiencia = experiencia;
         }
 
-
-
+        public String getEspecialidad() { return especialidad; } // Getter para especialidad
+        public int getExperiencia() { return experiencia; } // Getter para experiencia
 
 }
