@@ -36,4 +36,7 @@ public class InterfazProfesor extends JFrame {
 
         setVisible(true);
     }
+    private void guardarProfesor() {
+
+    }
 }
