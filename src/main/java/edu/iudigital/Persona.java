@@ -16,4 +16,22 @@ public class Persona {
         this.estatura = estatura;
         this.peso = peso;
     }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getApellido() {
+        return apellido;
+    }
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+    public String getGenero() {
+        return genero;
+    }
+    public double getEstatura() {
+        return estatura;
+    }
+    public double getPeso() {
+        return peso;
+    }
 }
