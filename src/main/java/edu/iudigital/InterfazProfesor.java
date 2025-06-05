@@ -49,5 +49,28 @@ public class InterfazProfesor extends JFrame {
                     Integer.parseInt(txtExperiencia.getText())
             );
 
+            try (Connection conn = ConexionBD.getConnection()) {
+                if (conn != null) {
+                    String sql = "INSERT INTO profesor (nombre, apellido, fecha_nacimiento, genero, estatura, peso, especialidad, experiencia) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                    PreparedStatement stmt = conn.prepareStatement(sql);
+                    stmt.setString(1, profesor.getNombre());
+                    stmt.setString(2, profesor.getApellido());
+                    stmt.setString(3, profesor.getFechaNacimiento().toString());
+                    stmt.setString(4, profesor.getGenero());
+                    stmt.setDouble(5, profesor.getEstatura());
+                    stmt.setDouble(6, profesor.getPeso());
+                    stmt.setString(7, profesor.getEspecialidad());
+                    stmt.setInt(8, profesor.getExperiencia());
+                    stmt.executeUpdate();
+                    JOptionPane.showMessageDialog(this, "Profesor guardado.");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error de conexión a base de datos.");
+                }
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
+        }
     }
+
+
 }
