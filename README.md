@@ -8,7 +8,7 @@ Desarrollar una aplicación Java en IntelliJ IDEA que represente el uso del para
 
 ## 🛠️ Tecnologías Utilizadas
 
-- Java 17
+- Java 
 - JDBC (MySQL)
 - Swing (para la GUI)
 - IntelliJ IDEA
