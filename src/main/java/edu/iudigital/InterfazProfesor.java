@@ -72,5 +72,9 @@ public class InterfazProfesor extends JFrame {
         }
     }
 
+    public static void main(String[] args) {
+        new InterfazProfesor();
+    }
+
 
 }
