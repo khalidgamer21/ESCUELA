@@ -37,6 +37,17 @@ public class InterfazProfesor extends JFrame {
         setVisible(true);
     }
     private void guardarProfesor() {
+        try {
+            Profesor profesor = new Profesor(
+                    txtNombre.getText(),
+                    txtApellido.getText(),
+                    LocalDate.parse(txtFechaNacimiento.getText()),
+                    txtGenero.getText(),
+                    Double.parseDouble(txtEstatura.getText()),
+                    Double.parseDouble(txtPeso.getText()),
+                    txtEspecialidad.getText(),
+                    Integer.parseInt(txtExperiencia.getText())
+            );
 
     }
 }
